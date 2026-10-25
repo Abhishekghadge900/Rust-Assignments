@@ -7,6 +7,10 @@
     cargo test --test tuple_swap_test
 */
 
+fn main(){
+  let ans = swap_tuple((1,2));
+  print!("{:?}",ans);
+}
 pub fn swap_tuple(t: (i32, i32)) -> (i32, i32) {
-    todo!()
+    (t.1,t.0)
 }
