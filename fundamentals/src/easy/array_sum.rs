@@ -7,6 +7,16 @@
     cargo test --test array_sum_test
 */
 
+fn main(){
+  let mut arr :[i32;5] = [1;5];
+  for i in 0..5{
+    arr[i] = i as i32;
+  }
+  let ans = array_sum(&arr);
+  print!("{}",ans);
+}
+
 pub fn array_sum(arr: &[i32; 5]) -> i32 {
-    todo!()
+    let sum = arr.iter().sum();
+    sum
 }
