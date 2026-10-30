@@ -8,6 +8,19 @@
     cargo test --test borrow_count_test
 */
 
+fn main(){
+  let ve = vec![1,4,7,2,8,9,0,3,5,2,7];
+  let g_val = 5;
+  let ans = count_above(&ve, g_val);
+  print!("{}",ans);
+}
+
 pub fn count_above(values: &Vec<i32>, threshold: i32) -> usize {
-    todo!()
+    let mut count = 0;
+    for v in values{
+      if *v > threshold{
+        count += 1;
+      }
+    }
+    count 
 }
