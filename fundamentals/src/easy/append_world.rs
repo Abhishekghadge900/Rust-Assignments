@@ -8,6 +8,13 @@
     cargo test --test append_world_test
 */
 
+fn main(){
+  let st = String::from("hello");
+  let ans = append_world(st);
+  print!("{}",ans);
+}
+
 pub fn append_world(mut s: String) -> String {
-    todo!()
+    s.push_str(" world");
+    s
 }
