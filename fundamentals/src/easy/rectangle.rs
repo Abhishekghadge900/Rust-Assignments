@@ -14,12 +14,24 @@ pub struct Rectangle {
     pub height: f64,
 }
 
+fn main(){
+
+    let rect = Rectangle{
+        width : 0.7,
+        height : 0.7,
+    };
+
+    println!("Area of rectangle {}",rect.area());
+    print!("Is width equal to height: {}",rect.is_square());
+}
+
 impl Rectangle {
     pub fn area(&self) -> f64 {
-        todo!()
+        self.width * self.height
     }
 
     pub fn is_square(&self) -> bool {
-        todo!()
+        let ans : bool = self.width == self.height;
+        ans
     }
 }
