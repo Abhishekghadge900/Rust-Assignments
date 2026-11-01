@@ -15,6 +15,22 @@ pub enum Color {
     Custom(u8, u8, u8),
 }
 
+
+fn main() {
+    let red = Color::Red;
+    let green = Color::Green;
+    let blue = Color::Blue;
+    let custom = Color::Custom(128, 64, 255);
+
+    print!("Custom : {:?}",color_to_rgb(green));
+
+}
+
 pub fn color_to_rgb(color: Color) -> (u8, u8, u8) {
-    todo!()
+    match color {
+        Color::Red => (255,0,0),
+        Color::Green => (0,255,0),
+        Color::Blue => (0,0,255),
+        Color::Custom(r,g, b) => (r,g,b),
+    }
 }
