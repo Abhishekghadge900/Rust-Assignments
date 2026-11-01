@@ -8,6 +8,18 @@
     cargo test --test safe_divide_test
 */
 
+fn main(){
+  let a = 10.0;
+  let b = 5.0;
+  let ans = safe_divide(a, b);
+  print!("{:?}",ans);
+}
+
 pub fn safe_divide(a: f64, b: f64) -> Option<f64> {
-    todo!()
+    if b == 0 as f64{
+      None
+    }
+    else{
+      Some(a/b)
+    }
 }
