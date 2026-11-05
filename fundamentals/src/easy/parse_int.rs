@@ -8,6 +8,12 @@
     cargo test --test parse_int_test
 */
 
+fn main(){
+  let s = "10a";
+  let ans = parse_int(&s);
+  print!("{:?}",ans);
+}
+
 pub fn parse_int(s: &str) -> Result<i32, String> {
-    todo!()
+  s.parse::<i32>().map_err(|e| format!("failed to parse {} into an i32 :{}",s,e))
 }
